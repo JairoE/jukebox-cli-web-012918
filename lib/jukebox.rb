@@ -32,9 +32,9 @@ def play(songs)
   user_input = gets.chomp
   binding.pry
 
-  if user_input.instance_of?(string) && songs.include?(user_input)
+  if songs.include?(user_input)
     puts "Playing <#{user_input}>"
-  elsif user_input.instance_of?(int) && int < 10
+  elsif user_input.to_i.instance_of?(int) && int < 10
     puts "Playing <#{songs[user_input-1]}"
   else
     puts "Invalid input, please try again"
