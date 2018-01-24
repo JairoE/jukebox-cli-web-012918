@@ -1,3 +1,4 @@
+require 'pry'
 songs = [
   "Phoenix - 1901",
   "Tokyo Police Club - Wait Up",
@@ -28,6 +29,7 @@ def play(songs)
 
   puts "Please enter a song name or number:"
   user_input = gets.chomp
+  binding.pry
 
   if user_input.instance_of?(string) && songs.include?(user_input)
     puts "Playing <#{user_input}>"
